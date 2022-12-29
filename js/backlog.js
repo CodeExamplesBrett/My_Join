@@ -4,10 +4,12 @@ let colorsOfUrgency = {
   high: "../Join/img/icons_google/high-icon.png",
 };
 
+
 async function showBacklogTask() {
   await init('backlog-link');
   renderBacklogTasks();
 }
+
 
 function renderBacklogTasks() {
   let backlogtable = document.getElementById("backlogTable");
@@ -21,6 +23,7 @@ function renderBacklogTasks() {
     }
   }
 }
+
 
 function loadUser(i) {
   let task = tasks[i];
@@ -36,8 +39,8 @@ function loadUser(i) {
   }
 }
 
-//Displays dialogbox with details and option to add to board with button
 
+//Displays dialogbox with details and option to add to board with button
 function addToBoard(i) {
   let dialogInfo = document.getElementById("dialog-info");
   let dialogBox = document.getElementById("dialog-box");
@@ -48,10 +51,12 @@ function addToBoard(i) {
   loadUser(i);
 }
 
+
 function closeBox() {
   let closeDialog = document.getElementById("dialog-box");
   closeDialog.classList.add("d-none");
 }
+
 
 function pushToBoard(i) {
   tasks[i].status = "todo";
@@ -59,6 +64,7 @@ function pushToBoard(i) {
   setArray("tasks", tasks);
   renderBacklogTasks();
 }
+
 
 function setArray(key, array) {
   backend.setItem(key, JSON.stringify(array));

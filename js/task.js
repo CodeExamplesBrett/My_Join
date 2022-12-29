@@ -3,6 +3,7 @@ async function showOverview() {
   showCards();
 }
 
+
 function showCards() {
   clearOverview();
   for (let i = 0; i < tasks.length; i++) {
@@ -23,6 +24,7 @@ function showCards() {
   }
 }
 
+
 function loadImgOfMember(task, j) {
   for (let i = 0; i <= 1; i++) {
     let user = task.user[i];
@@ -33,6 +35,7 @@ function loadImgOfMember(task, j) {
     }
   }
 }
+
 
 function showMembers(i) {
   let task = tasks[i];
@@ -45,9 +48,11 @@ function showMembers(i) {
   }
 }
 
+
 function hideMembers(i) {
   document.getElementById(`member-overview${i}`).classList.add("d-none");
 }
+
 
 function clearOverview() {
   document.getElementById("inProgress").innerHTML = "";
@@ -55,6 +60,7 @@ function clearOverview() {
   document.getElementById("todo").innerHTML = "";
   document.getElementById("done").innerHTML = "";
 }
+
 
 function assignStatus(element) {
   if (element.status == "todo") {
@@ -75,15 +81,19 @@ function assignStatus(element) {
   }
 }
 
+
 let currentId = [];
+
 
 function startDragging(i) {
   currentId = i;
 }
 
+
 function allowDrop(ev) {
   ev.preventDefault();
 }
+
 
 function moveTo(category) {
   tasks[currentId]["status"] = category;
@@ -93,17 +103,21 @@ function moveTo(category) {
   showCards();
 }
 
+
 function highlight(id) {
   document.getElementById(id).classList.add("drag-erea-highlight");
 }
+
 
 function removeHighlight(id) {
   document.getElementById(id).classList.remove("drag-erea-highlight");
 }
 
+
 function setArray(key, array) {
   backend.setItem(key, JSON.stringify(array));
 }
+
 
 function getArray(key) {
   return JSON.parse(backend.getItem(key));

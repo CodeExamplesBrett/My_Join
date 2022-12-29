@@ -1,16 +1,16 @@
 setURL('https://brett-scott.developerakademie.net/smallest_backend_ever/');
 
+
 async function init(currentLink) {
   await downloadFromServer();
   tasks = JSON.parse(backend.getItem('tasks')) || [];
   users = JSON.parse(backend.getItem('user')) || [];
-
   //console.log(tasks);
   //console.log(users);
-
   await includeHTML();
   menuSelected(currentLink);
 }
+
 
 async function includeHTML() {
   let includeElements = document.querySelectorAll("[w3-include-html]");
@@ -35,6 +35,7 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+
 
 function menuSelected(currentLink) {
   document.getElementById(currentLink).classList.add("board-menu-highlight");

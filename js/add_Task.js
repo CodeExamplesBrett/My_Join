@@ -77,12 +77,14 @@ function createTaskJSON(title, category, description, date, urgency){
   pushTaskToServerJSON(task);
 }
 
+
 function pushTaskToServerJSON(task){
     // Push JSON to array "tasks" auf server
   tasks.push(task);
   setArray("tasks", tasks);
   //console.log(tasks);
 }
+
 
 /**
  * This function resets all inputs in addTask form
@@ -105,6 +107,7 @@ function pushTaskToServerJSON(task){
   urgency = document.getElementById("urgency").value = "";
 }
 
+
 function showConfirmationText() {
     // task sent confirmation text displayed then turned off after 2 seconds
     document.getElementById(
@@ -115,6 +118,7 @@ function showConfirmationText() {
       document.getElementById("confirm-text").innerHTML = "";
     }, 4000);
   }
+
 
   /**
  * This function brings up dialog box with users to assign to the task (From array users on Backend server )
@@ -174,8 +178,6 @@ function showUser() {
 }
 
 
-
-
 /**
  * This Function adds the selected user to the selected users array "selectUser" (from the select user dialog popup function "showUser")
  * 
@@ -213,6 +215,7 @@ function addUser(i) {
 
 }
 
+
 /**
  * This function compares the users in all users with the users in selected users if they are the in both then 
  * a tick will be placed next to the user in the select user dialog popup --- from function "show user"
@@ -233,6 +236,7 @@ function showCheckUp() {
     }
   }
 }
+
 
 /**
  * This function closes the adduser popup dialog box

@@ -30,11 +30,13 @@ function cardHTML(tasks, i) {
     `;
 }
 
+
 function memberNUmberHTML(length) {
   return /*html*/ `
     <span class="number-of-member">+${length}</span>
     `;
 }
+
 
 function memberHTML(img) {
   return /*html*/ `
@@ -42,11 +44,13 @@ function memberHTML(img) {
     `;
 }
 
+
 function memberOverviewHTML(img) {
   return /*html*/ `
         <img class="avatar-ov" src="${img}" alt="">
     `;
 }
+
 
 function backlogTableHTML(i, colorOfUrgency) {
   return /*html*/ `
@@ -82,6 +86,7 @@ function backlogTableHTML(i, colorOfUrgency) {
             </div>
             `;
 }
+
 
 function overlayTaskHTML(i) {
   return /*html*/ `
@@ -134,6 +139,7 @@ function overlayTaskHTML(i) {
     `;
 }
 
+
 function addUserDataToDialogbox(i, userName, userImg, userMail){
     return /*html*/ `
     <!-- <div class="individualUser" onclick="addUser(${i}, '${userName}')"> -->
@@ -150,6 +156,7 @@ function addUserDataToDialogbox(i, userName, userImg, userMail){
        <div id="checked_${i}"></div>
     </div>`;
 }
+
 
 function addTaskDetailsToDialogbox(i){
   return /*html*/ `<div class="dialog-title">${tasks[i].title}</div>
