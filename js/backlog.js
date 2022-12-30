@@ -1,7 +1,7 @@
 let colorsOfUrgency = {
-  low: "../Join/img/icons_google/low-icon.png",
-  medium: "../Join/img/icons_google/medium-icon.png",
-  high: "../Join/img/icons_google/high-icon.png",
+  low: "../img/icons_google/low-icon.png",
+  medium: "../img/icons_google/medium-icon.png",
+  high: "../img/icons_google/high-icon.png",
 };
 
 
