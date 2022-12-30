@@ -1,4 +1,4 @@
-setURL('https://brett-scott.developerakademie.net/smallest_backend_ever/');
+setURL('https://join.brett--scott.com/smallest_backend_ever/');
 
 
 async function init(currentLink) {
